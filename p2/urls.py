@@ -15,10 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from shanu.p2 import views
+from p2 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path(' ',views.index,name='index'),
+    path('',views.index,name='index'),#path function is responsible for url mapping
+    #path('suffix',name of the function,name=name of the mapping)
     path('home',views.home,name='home'),
-]
+    path('html_demo1',views.html_demo1,name="html_demo1"),
 ]
